@@ -1,5 +1,5 @@
 ﻿<!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -7,40 +7,132 @@
     <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
     <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
     <link rel="stylesheet" href="~/projeto_integrador.styles.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/css/extra.css" />
+    <link rel="stylesheet" href="~/sccs/main.css" />
 </head>
 <body>
     <header>
-        <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
-            <div class="container-fluid">
-                <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">projeto_integrador</a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target=".navbar-collapse" aria-controls="navbarSupportedContent"
-                        aria-expanded="false" aria-label="Toggle navigation">
+
+        <!-- HEADER / NAVBAR -->
+        <nav class="navbar navbar-expand-md bg-light">
+            <div class="container d-flex justify-content-between align-items-center">
+
+                <a class="navbar-brand" href="index.html">
+                    <img src="~/imgs/logos/logov3.svg" width="85px" alt="">
+                </a>
+
+                <!-- HAMBURGER MENU -->
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
-                <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between">
-                    <ul class="navbar-nav flex-grow-1">
+
+                <!-- NAV LINKS -->
+                <div class="collapse navbar-collapse justify-content-center" id="navbarNavDropdown">
+                    <ul class="navbar-nav gap-3">
                         <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Index">Home</a>
+                            <a class="nav-link text-dark" asp-area="" asp-controller="Vagas" asp-action="Index">VAGAS</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
+                            <a class="nav-link text-dark" asp-area="" asp-controller="Cursos" asp-action="Index">CURSOS</a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle text-dark" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                INSTITUCIONAL
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" asp-area="" asp-controller="Institucional" asp-action="Suporte">Suporte</a></li>
+                                <li><a class="dropdown-item" asp-area="" asp-controller="Institucional" asp-action="Sobre_nos">Sobre nós</a></li>
+                            </ul>
                         </li>
                     </ul>
+                </div>
+
+                <!-- CREATE ACCOUNT / LOGIN BUTTON -->
+                <div class="d-none d-md-block">
+                    <button type="button" class="btn btn-dark px-4">
+                        <img src="imgs/outros/box-arrow-in-right.svg" width="25px" alt="">
+                        ENTRAR
+                    </button>
                 </div>
             </div>
         </nav>
     </header>
-    <div class="container">
-        <main role="main" class="pb-3">
+
+    <div>
+        <main role="main">
             @RenderBody()
         </main>
     </div>
 
-    <footer class="border-top footer text-muted">
-        <div class="container">
-            &copy; 2025 - projeto_integrador - <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
+    <!-- FOOTER -->
+    <footer class="container-fluid bg-dark">
+        <div class="container text-white py-5">
+            <div class="row row-cols-1 row-cols-md-4">
+
+                <!-- LOGO AREA -->
+                <div class="h-25 d-flex justify-content-center justify-content-md-start py-3 p-md-0">
+                    <img src="~/imgs/logos/logov3_dark.svg" alt="">
+                </div>
+
+                <!-- SITE MAP -->
+                <div class="text-md-start text-center py-3 py-md-0 text-white">
+                    <p class="fs-3">Candidatos</p>
+                    <ul class="list-unstyled m-0">
+                        <li>
+                            <a class="text-decoration-none" asp-area="" asp-controller="" asp-action="">
+                                <p class="fs-4 my-0">Perfil candidato</p>
+                            </a>
+                            <a class="text-decoration-none" asp-area="" asp-controller="" asp-action="">
+                                <p class="fs-4 my-0">Vagas</p>
+                            </a>
+                            <a class="text-decoration-none" asp-area="" asp-controller="" asp-action="">
+                                <p class="fs-4 my-0">Cursos</p>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="text-md-start text-center py-3 py-md-0">
+                    <p class="fs-3">Empresas</p>
+                    <ul class="list-unstyled m-0">
+                        <li>
+                            <a class="text-decoration-none" asp-area="" asp-controller="" asp-action="">
+                                <p class="fs-4 my-0">Perfil empresa</p>
+                            </a>
+                            <a class="text-decoration-none" asp-area="" asp-controller="" asp-action="">
+                                <p class="fs-4 my-0">Anúncios</p>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="text-md-start text-center py-3 py-md-0">
+                    <p class="fs-3">Institucional</p>
+                    <ul class="list-unstyled m-0">
+                        <li>
+                            <a class="text-decoration-none" asp-area="" asp-controller="Institucional" asp-action="Suporte">
+                                <p class="fs-4 my-0">Suporte</p>
+                            </a>
+                            <a class="text-decoration-none" asp-area="" asp-controller="Institucional" asp-action="Sobre_nos">
+                                <p class="fs-4 my-0">Sobre nós</p>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <hr class="container border-white my-5">
+
+            <!-- EXTRAS -->
+            <div class="d-flex align-items-center justify-content-between">
+                <p class="fs-4 m-0">2024 -</p>
+                <a href="https://github.com/MeCapel/emprega_matao">
+                    <img src="~/imgs/icons/github.svg" alt="Icone github">
+                </a>
+            </div>
         </div>
     </footer>
+
     <script src="~/lib/jquery/dist/jquery.min.js"></script>
     <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
     <script src="~/js/site.js" asp-append-version="true"></script>
