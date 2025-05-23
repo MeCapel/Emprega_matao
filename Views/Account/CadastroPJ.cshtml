@@ -1,0 +1,88 @@
+﻿<div class="d-flex p-0">
+    <div class="container d-flex">
+
+        <!-- DIV REGISTRAR -->
+        <div class="bg-white p-3 p-lg-5 col-12 col-md-6">
+
+            <!-- TITLE -->
+            <div class="text-center">
+                <p class="fs-4 fw-bold text-secondary">
+                    Crie sua conta PJ <i class="fa-solid fa-circle-info"
+                                         style="color: var(--cinza2);"></i>
+                </p>
+                <p class="">Já possui uma conta? <a href="" class="text-decoration-none">Fazer login</a></p>
+            </div>
+
+            <form class="" method="post">
+                <!-- nome da empresa -->
+                <label for="input_nome">Nome da empresa:</label>
+                <input class="col-12 form-control border border-dark rounded-2 mb-4"
+                       type="text" id="input_nome">
+
+                <!-- cnpj -->
+                <label for="input_cnpj">CNPJ:</label>
+                <input class="col-12 form-control border border-dark rounded-2 mb-4"
+                       type="text" id="input_cnpj">
+
+                <div class="row justify-content-between">
+                    <!-- cidade -->
+                    <div class="col-12 col-md-8">
+                        <label for="input_cidade">Cidade:</label>
+                        <input class="form-control border border-dark rounded-2 mb-4"
+                               type="text" id="input_cidade">
+                    </div>
+                    <!-- estado -->
+                    <div class="col-12 col-md-4">
+                        <label for="input_estado">Estado:</label>
+                        <select class="form-control border border-dark rounded-2 mb-4 form-select"
+                                id="input_estado">
+                            <option value="SP">SP</option>
+                            <option value="MG">MG</option>
+                            <option value="RJ">RJ</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="row justify-content-between">
+                    <!-- endereço -->
+                    <div class="col-12 col-md-8">
+                        <label for="input_endereco">Endereço:</label>
+                        <input class="form-control border border-dark rounded-2 mb-4"
+                               type="text" id="input_endereco">
+                    </div>
+                    <!-- numero -->
+                    <div class="col-12 col-md-4">
+                        <label for="input_num">Nº:</label>
+                        <input class="form-control border border-dark rounded-2 mb-4"
+                               type="number" id="input_num">
+                    </div>
+                </div>
+
+                <!-- email -->
+                <label for="input_email">E-mail:</label>
+                <input class="col-12 form-control border border-dark rounded-2 mb-4"
+                       type="email" id="input_email">
+
+                <!-- senha -->
+                <label for="input-senha">Senha:</label>
+                <input class="col-12 form-control border border-dark rounded-2 mb-4"
+                       type="text" id="input-senha">
+
+                <!-- confirma senha -->
+                <label for="input_confirmsenha">Confirme a senha:</label>
+                <input class="col-12 form-control border border-dark rounded-2 mb-4"
+                       type="text" id="input_confirmsenha">
+
+                <!-- btn registrar-se -->
+                <div class="container d-flex justify-content-center py-3">
+                    <button class="col-12 btn btn-dark border border-dark" type="submit">
+                        Solicitar uma conta juridica
+                    </button>
+                </div>
+            </form>
+        </div>
+        <div class="col-md-6 d-none d-md-flex align-items-center justify-content-center" style="background: var(--custom-gradient);">
+            <img src="~/imgs/imagens/desenho2.svg" style="width: 75%;" alt="Imagem ilustrativa de fachamento de contrato">
+        </div>
+    </div>
+</div>

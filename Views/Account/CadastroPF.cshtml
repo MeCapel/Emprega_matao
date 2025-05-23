@@ -1,0 +1,70 @@
+﻿<div class="d-flex p-0">
+    <div class="container d-flex">
+
+        <!-- DIV REGISTRAR -->
+        <div class="bg-white p-3 p-lg-5 col-12 col-md-6">
+
+            <!-- TITLE -->
+            <div class="text-center">
+                <p class="fs-4 fw-bold text-secondary">Crie sua conta PF</p>
+                <p class="">Já possui uma conta? <a href="" class="text-decoration-none">Fazer login</a></p>
+            </div>
+
+            <form class="" method="post">
+                <!-- nome da pessoa -->
+                <label for="input_nome">Nome:</label>
+                <input class="col-12 form-control border border-dark rounded-2 mb-4"
+                       type="text" id="input_nome">
+
+                <!-- cpf -->
+                <label for="input_cpf">CPF:</label>
+                <input class="col-12 form-control border border-dark rounded-2 mb-4"
+                       type="text" id="input_cpf">
+
+                <div class="row justify-content-between">
+                    <!-- nascimento -->
+                    <div class="col-12 col-md-6">
+                        <label for="input_nascimento">Data de nascimento:</label>
+                        <input class="form-control border border-dark rounded-2 mb-4"
+                               type="text" id="input_nascimento">
+                    </div>
+                    <!-- estado -->
+                    <div class="col-12 col-md-6">
+                        <label for="input_sexo">Sexo:</label>
+                        <select class="form-control border border-dark rounded-2 mb-4 form-select"
+                                id="input_sexo">
+                            <option value="Masculino">Masculino</option>
+                            <option value="Feminino">Feminino</option>
+                        </select>
+                    </div>
+                </div>
+
+                <!-- email -->
+                <label for="input_email">E-mail:</label>
+                <input class="col-12 form-control border border-dark rounded-2 mb-4"
+                       type="email" id="input_email">
+
+                <!-- senha -->
+                <label for="input-senha">Senha:</label>
+                <input class="col-12 form-control border border-dark rounded-2 mb-4"
+                       type="text" id="input-senha">
+
+                <!-- confirma senha -->
+                <label for="input_confirmsenha">Confirme a senha:</label>
+                <input class="col-12 form-control border border-dark rounded-2 mb-4"
+                       type="text" id="input_confirmsenha">
+
+                <!-- btn registrar-se -->
+                <div class="container d-flex justify-content-center py-3">
+                    <button class="col-12 btn btn-dark border border-dark" type="submit">
+                        Registrar-se
+                    </button>
+                </div>
+            </form>
+        </div>
+        <div class="col-md-6 d-none d-md-flex align-items-center justify-content-center" style="background: var(--custom-gradient);">
+            <img src="~/imgs/imagens/desenho2.svg" style="width: 75%;" alt="Imagem ilustrativa de fachamento de contrato">
+        </div>
+    </div>
+</div>
+
