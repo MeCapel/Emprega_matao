@@ -1,3 +1,6 @@
+using Microsoft.EntityFrameworkCore;
+using projeto_integrador.Data;
+
 namespace projeto_integrador
 {
     public class Program
@@ -8,6 +11,10 @@ namespace projeto_integrador
 
             // Add services to the container.
             builder.Services.AddControllersWithViews();
+
+            //"DbContext" will be using SQl server, then here goes the Connection String
+            builder.Services.AddDbContext<ApplicationDbContext>(options =>
+                    options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
 
             var app = builder.Build();
 
